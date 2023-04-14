@@ -19,7 +19,7 @@ public final class Constants {
     public static final int CO_DRIVER_CONTROLLER_PORT = 1;
   }
 
-  public static class driveTrainConstants {
+  public static class driveConstants {
     // ports for motors
     public static final int frontLeftPort = 1;
     public static final int frontRightPort = 2;
@@ -36,6 +36,11 @@ public final class Constants {
     public final static double k_driveI = 0;
     public final static double k_driveD = 0;
 
+    // turning pid
+    public  final static double k_turnP = 0;
+    public  final static double k_turnI = 0;
+    public  final static double k_turnD = 0;
+
     // slew rate constant
     public final static double driveStartSlewRate = 2.25;
     public final static double driveStopSlewRate = -4.5;
@@ -49,7 +54,7 @@ public final class Constants {
     public final static double tick2feet = 1/feet2tick;
   }
 
-  public static class ElevatorConstants{
+  public static class elevatorConstants {
     // motor ports
     public static final int LeftElevatorMotor = 6;
     public static final int RightElevatorMotor = 7;
@@ -64,7 +69,7 @@ public final class Constants {
     private final static double WINCH_RADIUS = 1.72/2;
   }
 
-  public static class ArmMotorConstants{
+  public static class armConstants {
     // motor port
     public static final int armMotor = 5;
 
@@ -78,7 +83,7 @@ public final class Constants {
     private final static double WINCH_RADIUS = 1.9/2;
   }
 
-  public static class endEffectorConstants {
+  public static class clawConstants {
     // motor ports
     public static final int leftMotor = 8;
     public static final int rightMotor = 9;
@@ -96,9 +101,8 @@ public final class Constants {
     public final static double kInches2Rots = kCircumperence / GEAR_REDUCTION;
     public final static double kRots2inches = 1/kInches2Rots;
 
-    public final static double doubleSoftLimitRots = 20;
-    public final static float rightSoftLimitRots = (float) doubleSoftLimitRots;
-    public final static float leftSoftLimitRots = (float) doubleSoftLimitRots;
+    public final static float rightSoftLimitRots = (float) 20;
+    public final static float leftSoftLimitRots = (float) 20;
   }
 
   public static final class IOConstants {
